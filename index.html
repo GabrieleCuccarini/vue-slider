@@ -20,10 +20,10 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="img-container">
-                        <img :src="movie.slides[currentIndex].image" class="img-top" alt="...">    
+                        <img :src="movie.images[currentIndex]" class="img-top" alt="...">    
                         <div class="absolute-text mx-2">
-                            <h2>{{ movie.slides[currentIndex].title }}</h2>
-                            <h5>{{ movie.slides[currentIndex].text }}</h5>
+                            <h2>{{ movie.title[currentIndex] }}</h2>
+                            <h5>{{ movie.text[currentIndex] }}</h5>
                         </div>
                     </div>
                         
@@ -46,9 +46,9 @@
             </div>
         </div>                    
         
-        <div v-for="(element, i) in slides" class="thumb" :class="(i === currentIndex) ? 'active' : '' "
+        <div v-for="(element, i) in images" class="thumb" :class="(i === currentIndex) ? 'active' : '' "
             @click="onThumbnailClick(i)" >
-            <img :src="element.image" :alt="element.title">
+            <img :src="element.images" :alt="element.title">
         </div>
     </div>
 
