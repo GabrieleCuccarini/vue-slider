@@ -35,22 +35,17 @@
                       <button class="btn btn-light next" @click="clickNext">
                         <i class="fas fa-chevron-down"></i>
                       </button>
-                </div>
-                
-                
+                </div>              
 
                 <div class="col-md-3 d-flex flex-column">
-               
-
+                    <div v-for="(any, i) in movie.images" class="thumb" :class="(i === currentIndex) ? 'active' : '' "
+                        @click="onThumbClick(i)" >
+                        <img :src="movie.images[i]" :alt="movie.images[i]" />
+                    </div>
                 </div>
             </div>
         </div>                    
         
-        <div v-for="(element, i) in images" class="thumb" :class="(i === currentIndex) ? 'active' : '' "
-            @click="onThumbnailClick(i)" >
-            <img :src="element.images" :alt="element.title">
-        </div>
-    </div>
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>

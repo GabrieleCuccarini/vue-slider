@@ -44,7 +44,8 @@ createApp({
             this.currentIndex++;
           }
         },
-        onThumbnailClick (clickedImageIndex) {
+        //BONUS 1
+        onThumbClick (clickedImageIndex) {
           this.currentIndex = clickedImageIndex;
         },
     }

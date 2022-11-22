@@ -53,9 +53,15 @@
 }
 
 .thumb {
+    flex-basis: 20%;
     opacity: 0.5;
 }
 
 .thumb.active {
     opacity: 1;
+}
+
+.thumb img {
+    width: 60%;
+    aspect-ratio: 2 / 1;
 }
