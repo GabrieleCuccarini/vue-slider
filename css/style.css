@@ -6,6 +6,11 @@
 
 .col-md-9 {
     position: relative;
+    padding: 0;
+}
+
+.col-md-3 {
+    padding: 0;
 }
 
 .container {
@@ -47,22 +52,10 @@
     color: white;
 }
 
-.thumbs {
-    background: #000;
-    position: relative;
-}
-
 .thumb {
     opacity: 0.5;
 }
 
-.thumb img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 .thumb.active {
-    border: 2px solid #ccc;
     opacity: 1;
 }

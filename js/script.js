@@ -33,4 +33,23 @@ createApp({
             }
         };
     },
+    methods: {
+        clickPrev () {
+          if (this.currentImageIndex === 0) {
+            this.currentImageIndex = this.movie.slides.length - 1;
+          } else {
+            this.currentImageIndex--;
+          }
+        },
+        clickNext () {
+          if (this.currentImageIndex === this.movie.slides.length - 1) {
+            this.currentImageIndex = 0;
+          } else {
+            this.currentImageIndex++;
+          }
+        },
+        onThumbnailClick (clickedImageIndex) {
+          this.currentImageIndex = clickedImageIndex;
+        },
+    }
   }).mount("#app")
