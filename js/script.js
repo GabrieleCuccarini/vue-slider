@@ -31,8 +31,8 @@ createApp({
 },
     methods: {
         clickPrev () {
-          if (this.currentIndex = 0) {
-            this.currentIndex === this.images.length - 1;
+          if (this.currentIndex === 0) {
+            this.currentIndex = (this.movie.images.length - 1);
           } else {
             this.currentIndex--;
           }
