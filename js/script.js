@@ -1,11 +1,9 @@
 const { createApp } = Vue;
 
 createApp({
-    // data: function () {}
     data () {
-      // la funzione data deve SEMPRE ritornare un oggetto
       return {
-        currentImageIndex: 0,
+        currentIndex: 0,
         movie: {
             slides: [
             {
@@ -35,21 +33,21 @@ createApp({
     },
     methods: {
         clickPrev () {
-          if (this.currentImageIndex === 0) {
-            this.currentImageIndex = this.movie.slides.length - 1;
+          if (this.currentIndex === 0) {
+            this.currentIndex = this.movie.slides.length - 1;
           } else {
-            this.currentImageIndex--;
+            this.currentIndex--;
           }
         },
         clickNext () {
-          if (this.currentImageIndex === this.movie.slides.length - 1) {
-            this.currentImageIndex = 0;
+          if (this.currentIndex === this.movie.slides.length - 1) {
+            this.currentIndex = 0;
           } else {
-            this.currentImageIndex++;
+            this.currentIndex++;
           }
         },
         onThumbnailClick (clickedImageIndex) {
-          this.currentImageIndex = clickedImageIndex;
+          this.currentIndex = clickedImageIndex;
         },
     }
   }).mount("#app")
