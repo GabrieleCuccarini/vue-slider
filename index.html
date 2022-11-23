@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" />
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 </head>
 
 <body>
@@ -25,19 +26,18 @@
                             <h2>{{ movie.title[currentIndex] }}</h2>
                             <h5>{{ movie.text[currentIndex] }}</h5>
                         </div>
-                    </div>
-                        
-                        <!-- BUTTONS PREVIOUS/NEXT -->
-                      <button class="btn btn-light prev" @click="clickPrev">
-                        <i class="fas fa-chevron-up"></i>
-                      </button>
-        
-                      <button class="btn btn-light next" @click="clickNext">
-                        <i class="fas fa-chevron-down"></i>
-                      </button>
+                    </div>                       
                 </div>              
-
+                
                 <div class="col-md-3 d-flex flex-column">
+                    <!-- BUTTONS PREVIOUS/NEXT -->
+                  <button class="btn btn-light prev" @click="clickPrev">
+                    <i class="fas fa-chevron-up"></i>
+                  </button>
+    
+                  <button class="btn btn-light next" @click="clickNext">
+                    <i class="fas fa-chevron-down"></i>
+                  </button>
                     <div v-for="(any, i) in movie.images" class="thumb" :class="(i === currentIndex) ? 'active' : '' "
                         @click="onThumbClick(i)" >
                         <img :src="movie.images[i]" :alt="movie.images[i]" />
@@ -47,7 +47,6 @@
         </div>                    
         
 
-    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>
 </body>
 

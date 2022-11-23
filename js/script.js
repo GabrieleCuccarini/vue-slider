@@ -26,8 +26,7 @@ createApp({
             'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
             'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
             ]
-        },
-        timer: setInterval (this.clickNext, 3000)
+        }
     }
 },
     methods: {

@@ -19,12 +19,12 @@
     align-items: center;
 }
 
-.col-md-9 button {
+.col-md-3 button {
     position: absolute;
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    left: calc(50% - 30px);
+    left: calc(30% - 15px);
     padding: 0;
 }
 
